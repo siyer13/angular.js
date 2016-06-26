@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html data-ng-app = "">
+<head>
+<title>Angular Filters</title>
+</head>
+<body data-ng-init="customers=[{name:'Neal',location:'New York'},{name:'Peter', location:'Manhattan'}, {name:'Mozz',location:'Detroit'}]">
+  <ul>
+    <li data-ng-repeat="cust in customers | orderBy: 'location'">{{cust.name}} - {{cust.location}} </li>
+  </ul>
+</body>
+<script src="angular.min.js"></script>
+</html>
