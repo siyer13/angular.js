@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-ng-app = "myApp" data-ng-controller="myController">
+<head>
+<title>Angular Filters</title>
+</head>
+<body>
+  {{carname}}
+
+<ul>
+    <li data-ng-repeat="x in names">{{x}}</li>
+</ul>
+
+<input data-ng-model="name">
+
+<h1>My name is {{name}}</h1>
+
+</body>
+<script src="angular.min.js"> </script>
+<script>
+ var app = angular.module('myApp', []);
+
+ app.controller('myController', function($scope) {
+   $scope.carname = "Volvo";
+    $scope.names = ["Emil", "Tobias", "Linus"];
+    $scope.name = "John Doe";
+ });
+
+ </script>
+ </html>
