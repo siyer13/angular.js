@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-ng-app = "myApp" >
+<head>
+<title>Angular Routes</title>
+</head>
+<body ng-app="myApp">
+
+<p><a href="#/">Main</a></p>
+
+<a href="#red">Red</a>
+<a href="#green">Green</a>
+<a href="#blue">Blue</a>
+<p> Click here </p>
+<div ng-view></div>
+<script src="angular.min.js"> </script>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm"
+    })
+    .when("/red", {
+        templateUrl : "red.htm"
+    })
+    .when("/green", {
+        templateUrl : "green.htm"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    });
+});
+</script>
+
+</body>
+</html>
