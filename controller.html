@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html data-ng-app = "">
+<head>
+<title>Angular Controllers</title>
+</head>
+<body>
+
+
+  <script src="angular.min.js"></script>
+  <script>
+    function Simple($scope) {
+ $scope.customers =
+       [
+         {name:'Neal', location:'New York'},
+         {name:'Peter', location:'Manhattan'},
+         {name:'Mozz', location:'Detroit'}
+       ];
+    }
+  </script>
+
+<div data-ng-controller="Simple">
+  <ul>
+      <li data-ng-repeat="cust in customers">
+          {{cust.name}} - {{cust.city}}
+      </li>
+ </ul>
+</div>
+
+
+</body>
+
+
+</html>
